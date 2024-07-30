@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluffyworld Community</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-con">
+                <ul class="menu">
+                    <li><a href="#" class="nav-items active">HOME</a></li>
+                    <li><a href="https://guide.fluffyworld.online/" class="nav-items">NEWS</a></li>
+                    <li><a href="https://guide.fluffyworld.online/" class="nav-items">GUIDES</a></li>
+                    <li><a href="https://guide.fluffyworld.online/rules/rules" class="nav-items">RULES</a></li>
+                    <a href="https://store.fluffyworld.online/" target="_blank" class="btn-store">
+    <i class="fa-solid fa-cart-shopping"></i> STORE
+</a>
+                </ul>
+                <div class="nav-logo">
+                    <button onclick="window.location.href='https://discord.gg/RFd9Hv8udX'" target="_blank"  class="btn-store"><i class="fa-brands fa-discord"></i></button>
+                    <button id="copyText" class="btn-ip"><i class="fa-solid fa-gamepad"></i> FLUFFYWORLD.ONLINE</button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="server-logo">
+        <div class="container">
+            <div class="server-logo-con">
+                <div class="blur">
+                    <img src="images/Gaylogp.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-info">
+        <div class="container">
+            <div class="news-con" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <h2>Fluffyworld News</h2>
+                <h3>ติดตามข่าวสารล่าสุดและการอัปเดตล่าสุด!</h3>
+            </div>
+
+            <div class="btn-con" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <a href="#">ดูวิธีการเล่นพื้นฐาน</a>
+            </div>
+
+            <div class="info-con" data-aos="fade-right">
+                <img src="images/2_valentine.png" alt="">
+                <div class="text-con">
+                    <h1>ชุมชน Fluffyworld</h1>
+                    <p>เซิร์ฟเวอร์เอาชีวิตรอดของประเทศไทยที่เน้นให้ผู้เล่นนั้น "เล่นเพื่อชนะ" <br>ไม่มีคำว่า Pay to win
+                        ในเซิร์ฟเวอร์นี้ กระตุ้นให้ผู้เล่นทำเควส มีดันเจี้ยน มีกิจกรรม
+                        ให้ผู้เล่นได้เพลิดเพลินไปกับความสนุก</p>
+                    <a href="https://discord.gg/RFd9Hv8udX" target="_blank"><i class="fa-brands fa-discord"></i> เข้าร่วมดิสคอร์ด</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-con" data-aos="zoom-in">
+                <img src="images/Gaylogp.png" alt="">
+                <div class="text-foot-con">
+                    <a id="copyText2" class="btn-footer"><i class="fa-solid fa-gamepad"></i> FLUFFYWORLD.ONLINE</a>
+                    <a class="btn-footer"><i class="fa-brands fa-discord"></i></a>
+                    <a class="btn-footer"><i class="fa-brands fa-youtube"></i></a>
+                    <a class="btn-footer"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="btn-footer"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="btn-footer"><i class="fa-brands fa-tiktok"></i></a>
+                    <p>เราไม่มีส่วนเกี่ยวข้องกับ Mojang AB.
+                        © 2024 Fluffyworld. All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        document.getElementById("copyText").addEventListener("click", function () {
+            var textToCopy = this.textContent;
+            var tempInput = document.createElement("input");
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("คัดลอกสำเร็จ " + textToCopy);
+        });
+
+        document.getElementById("copyText2").addEventListener("click", function () {
+            var textToCopy = this.textContent;
+            var tempInput = document.createElement("input");
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("คัดลอกสำเร็จ " + textToCopy);
+        });
+
+
+        document.addEventListener('DOMContentLoaded',
+            function () {
+                const navItems = document
+                    .querySelectorAll('.nav-items');
+
+                navItems.forEach(item => {
+                    item.addEventListener('click',
+                        function () {
+                            navItems.forEach(navItem => navItem
+                                .classList.remove('active'));
+                            this.classList.add('active');
+                        });
+                });
+            });
+    </script>
+</body>
+
+</html>
+
+</html>
